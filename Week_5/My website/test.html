@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: 34.138189, lng: -118.353193};
+
+  var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: myLatLng,
+            zoom: 8
+        });
+
+        var marker = new google.maps.Marker({
+          position: {lat: 34.138189, lng: -118.353193},
+          map: map,
+          title: 'Hello World!'
+        });
+
+          var markerA= new google.maps.Marker({
+          position: {lat:33.897456, lng:-118.195946 },
+          map: map,
+          title: 'Hello World!'
+         
+        });
+
+          var markerB = new google.maps.Marker({
+          position: {lat:33.762809, lng:-118.164789},
+          map: map,
+          title: 'Hello World!'
+          
+        });
+
+          var markerC = new google.maps.Marker({
+          position: {lat:34.022965, lng:-118.285078},
+          map: map,
+          title: 'Hello World!'
+          
+        });
+
+           var markerD = new google.maps.Marker({
+          position: {lat:33.943324, lng:-118.410909},
+          map: map,
+          title: 'Hello World!'
+         
+        });
+
+            var markerE = new google.maps.Marker({
+          position: {lat:33.810247, lng:-117.922466},
+          map: map,
+          title: 'Hello World!'
+         
+        });
+
+             var markerF = new google.maps.Marker({
+          position: {lat:33.828573, lng:-116.541437},
+          map: map,
+          title: 'Hello World!'
+          
+        });
+
+          var inwindow = new google.maps.InfoWindow({
+            content: "Plam Spring the most Beatufiul sight seeing ever."
+          });
+
+          markerF.addListener('click', function(){
+            inwindow.open(map,markerF);
+
+             });
+
+
+            var inwindow1= new google.maps.InfoWindow({
+            content: "DisneyLand,Family Resort"
+          });
+           markerE.addListener('click', function(){
+            inwindow1.open(map,markerE);
+
+
+             });
+
+
+            var inwindow2= new google.maps.InfoWindow({
+            content: "LAX Airport"
+          });
+           markerD.addListener('click', function(){
+            inwindow2.open(map,markerD);
+
+             });
+
+
+            var inwindow3= new google.maps.InfoWindow({
+            content: "HI"
+          });
+           markerC.addListener('click', function(){
+            inwindow2.open(map,markerC);
+
+             });
+
+
+            var inwindow4= new google.maps.InfoWindow({
+            content: "LongBeach,"
+          });
+           markerB.addListener('click', function(){
+            inwindow4.open(map,markerB);
+
+            });
+
+
+            var inwindow5= new google.maps.InfoWindow({
+            content: ""
+          });
+           markerA.addListener('click', function(){
+            inwindow5.open(map,markerA);
+
+
+
+
+
+
+
+          });
+
+
+
+
+
+
+
+
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW7V0kud98RMrtoS7GDuWfIjNar9vGbZ4&callback=initMap" async defer>
+    </script>
+      
+  </body>
+
+</html>
